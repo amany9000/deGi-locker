@@ -1,8 +1,9 @@
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { createClient, useAccount, WagmiConfig } from "wagmi";
+import { createClient, WagmiConfig } from "wagmi";
 import { filecoinHyperspace } from "wagmi/chains";
+import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
 import Pages from "./pages";
 
@@ -22,6 +23,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Pages.Landing />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    children: [
+      {
+        path: "/dashboard",
+        element: <Pages.Dashboard />,
       },
     ],
   },
@@ -49,13 +59,11 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  const { address } = useAccount();
-  console.log("address", address);
-
   return (
     <WagmiConfig client={client}>
       <ConnectKitProvider>
         <section className="container mx-auto">
+          <Navbar />
           <RouterProvider router={router} />
         </section>
       </ConnectKitProvider>
