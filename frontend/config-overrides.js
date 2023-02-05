@@ -15,7 +15,7 @@ module.exports = function override(config, env) {
     constants: require.resolve("constants-browserify"),
     "process/browser": require.resolve("process/browser"),
     net: require.resolve("net"),
-    fs: require.resolve("fs-extra"),
+    fs: false,
   };
   config.plugins.push(
     new webpack.ProvidePlugin({

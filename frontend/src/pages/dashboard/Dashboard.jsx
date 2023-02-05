@@ -1,24 +1,38 @@
-import axios from "axios";
+import { create_DID, genCID, getHash, register_DID } from "fvm-credentials";
 import { useState } from "react";
 
 const Dashboard = () => {
   const [files, setFiles] = useState([]);
+  const [base64Files, setBase64Files] = useState([]);
 
   const handleChange = async (event) => {
     const files = Array.from(event.target.files);
     setFiles(files);
+    const promises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          resolve(e.target.result);
+        };
+        reader.onerror = reject;
+      });
+    });
 
-    const formData = new FormData();
-    for (const file of files) {
-      formData.append("files", file);
-    }
+    const base64Result = await Promise.all(promises);
+    console.log("base64Result", base64Result);
+    const files64Hash = getHash(base64Result);
 
     try {
-      const res = await axios.post("http://localhost:8000/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const cid = await genCID(files64Hash, privateKey);
+      const did = await create_DID(privateKey);
+      const tx_hash = register_DID(did.did, cid, privateKey);
+
+      console.log(
+        "Successful TX_HASH of Registration",
+        tx_hash,
+        "\n Transaction is actually successfull, error because of misalignment of web3 and FVM"
+      );
     } catch (error) {
       console.log("error", error);
     }

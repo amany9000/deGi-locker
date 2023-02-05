@@ -16,14 +16,6 @@ const {
 
 app.post("/upload", upload.array("files"), async (request, response) => {
   const files = request.files.map((file) => file.path);
-
-  // const filesPath = files.map((file) => {
-  //   console.log("fiel", file);
-  //   const extName = path.extname(file.originalname).toString();
-  //   return parser.format(extName, file.buffer);
-  // });
-
-  // console.log("files", filesPath);
   const privateKey =
     "0xf974bad53de118dfe831ee84b065e8cd7f66fff82e41f7c933e412c862746302";
 

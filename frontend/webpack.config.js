@@ -13,7 +13,7 @@ module.exports = {
       constants: require.resolve("constants-browserify"),
       "process/browser": require.resolve("process/browser"),
       net: require.resolve("net"),
-      fs: require.resolve("fs-extra"),
+      fs: false,
     },
     extensions: [".wasm", ".mjs", ".js", ".jsx", ".json"],
   },
