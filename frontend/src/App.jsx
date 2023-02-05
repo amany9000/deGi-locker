@@ -5,7 +5,8 @@ import { createClient, WagmiConfig } from "wagmi";
 import { filecoinHyperspace } from "wagmi/chains";
 import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
-import Pages from "./pages";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Landing from "./pages/landing/Landing";
 
 const chains = [filecoinHyperspace];
 
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Pages.Landing />,
+        element: <Landing />,
       },
     ],
   },
@@ -31,28 +32,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        element: <Pages.Dashboard />,
-      },
-    ],
-  },
-  {
-    path: "/",
-    children: [
-      {
-        path: "/files",
-        element: <Pages.Files />,
-      },
-      {
-        path: "/register",
-        element: <Pages.RegisterPatient />,
-      },
-      {
-        path: "/send",
-        element: <Pages.Send />,
-      },
-      {
-        path: "/upload",
-        element: <Pages.Upload />,
+        element: <Dashboard />,
       },
     ],
   },

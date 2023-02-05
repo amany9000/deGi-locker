@@ -1,39 +1,27 @@
-import {
-  create_DID,
-  genCID,
-  getLocationHash,
-  register_DID,
-} from "fvm-credentials";
+import axios from "axios";
 import { useState } from "react";
 
 const Dashboard = () => {
   const [files, setFiles] = useState([]);
 
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     const files = Array.from(event.target.files);
     setFiles(files);
 
-    getLocationHash(files).then((files64) => {
-      console.log("FileHashList", files64);
-      const privateKey =
-        "0xf974bad53de118dfe831ee84b065e8cd7f66fff82e41f7c933e412c862746302";
-      genCID(files64, privateKey).then(async (cid) => {
-        console.log("CID: ", cid);
-        create_DID(privateKey).then((obj) => {
-          console.log("DID Object: ", obj);
-          register_DID(obj.did, cid, privateKey).then((tx_hash) =>
-            console.log(
-              "Successful TX_HASH of Registration",
-              tx_hash,
-              "\n Transaction is actually successfull, error because of misalignment of web3 and FVM"
-            )
-          );
-        });
+    const formData = new FormData();
+    for (const file of files) {
+      formData.append("files", file);
+    }
 
-        //const data = await ipfs.cat(cid).next()
-        //console.log('Data read back via ipfs.cat:',  new TextDecoder().decode(data.value))
+    try {
+      const res = await axios.post("http://localhost:8000/upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
-    });
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
   // const handleRemove = (file) => {

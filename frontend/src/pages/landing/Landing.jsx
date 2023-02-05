@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { ConnectKitButton } from "connectkit";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

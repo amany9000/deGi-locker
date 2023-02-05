@@ -1,0 +1,27 @@
+2023-02-03 20:16:48,746 [DEBUG] CloudFormation client initialized with endpoint https://cloudformation.us-west-2.amazonaws.com
+2023-02-03 20:16:48,747 [DEBUG] SQS client initialized with endpoint https://sqs.us-west-2.amazonaws.com
+2023-02-03 20:16:48,747 [DEBUG] CloudFormation client initialized with endpoint https://cloudformation.us-west-2.amazonaws.com
+2023-02-03 20:16:48,747 [DEBUG] Enabled single threading mode.
+2023-02-03 20:16:48,747 [DEBUG] Creating /var/lib/cfn-hup/data
+2023-02-03 20:16:48,758 [INFO] No umask value specified in config file. Using the default one: 0o22
+2023-02-03 20:16:49,410 [INFO] Refreshing listener credentials
+2023-02-03 20:16:49,502 [INFO] Scheduling next credential refresh in 1799.0 seconds
+2023-02-03 20:17:09,755 [INFO] Received command ElasticBeanstalkCommand-AWSEBAutoScalingGroup (invocation id: 2c6713be-2eca-4533-9e1e-832843f32ea3)
+2023-02-03 20:17:09,755 [INFO] Running action for aws-eb-command-handler
+2023-02-03 20:18:11,564 [INFO] Action for aws-eb-command-handler succeeded, returning SUCCESS
+2023-02-03 20:19:38,151 [INFO] Received command ElasticBeanstalkCommand-AWSEBAutoScalingGroup (invocation id: 5df38740-7829-4485-87c3-f8e50780703f)
+2023-02-03 20:19:38,151 [INFO] Running action for aws-eb-command-handler
+2023-02-03 20:20:16,807 [INFO] Action for aws-eb-command-handler succeeded, returning SUCCESS
+2023-02-03 20:21:57,050 [INFO] command processing is alive.
+2023-02-03 20:26:57,515 [INFO] command processing is alive.
+2023-02-03 20:31:57,925 [INFO] command processing is alive.
+2023-02-03 20:36:58,350 [INFO] command processing is alive.
+2023-02-03 20:41:58,764 [INFO] command processing is alive.
+2023-02-03 20:46:48,502 [INFO] Refreshing listener credentials
+2023-02-03 20:46:48,585 [INFO] Scheduling next credential refresh in 1799.0 seconds
+2023-02-03 20:46:59,189 [INFO] command processing is alive.
+2023-02-03 20:51:59,591 [INFO] command processing is alive.
+2023-02-03 20:57:00,000 [INFO] command processing is alive.
+2023-02-03 21:02:00,415 [INFO] command processing is alive.
+2023-02-03 21:03:40,815 [INFO] Received command ElasticBeanstalkCommand-AWSEBAutoScalingGroup (invocation id: c0b713b9-66d4-44cd-850a-6f3d95e75bee)
+2023-02-03 21:03:40,815 [INFO] Running action for aws-eb-command-handler
