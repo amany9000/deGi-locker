@@ -6,9 +6,13 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [user, setUser] = useState();
+  const pathname = window.location.pathname;
+
+  const navStyle = pathname === "/verifier" ? "absolute w-full" : "bg-white";
+  const buttonStyle = pathname === "/verifier" ? "text-white" : "";
 
   return (
-    <div className="isolate bg-white">
+    <div className={`isolate ${navStyle}`}>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -61,8 +65,13 @@ const Navbar = () => {
             <ConnectKitButton.Custom>
               {({ isConnected, show, truncatedAddress }) => {
                 return (
-                  <button className="font-semibold" onClick={show}>
-                    {isConnected ? `Welcome ${user} 🎉` : "WAGMI"}
+                  <button
+                    className={`font-semibold ${buttonStyle}`}
+                    onClick={show}
+                  >
+                    {isConnected
+                      ? `Welcome did:fvm:testnet:${user} 🎉`
+                      : "WAGMI"}
                     {(isConnected ? truncatedAddress : "WAGMI") &&
                       setUser(truncatedAddress)}
                   </button>

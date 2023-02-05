@@ -1,22 +1,34 @@
 import { ConnectKitButton } from "connectkit";
+import { verify } from "fvm-credentials";
+import { useSnackbar } from "react-simple-snackbar";
 import { useAccount } from "wagmi";
 
 const VerifierLanding = () => {
   const { address } = useAccount();
+  const [openSnackbar, closeSnackbar] = useSnackbar();
 
   const handleChange = async (event) => {
     const files = Array.from(event.target.files);
     console.log("files", files);
-    setFiles(files);
+    openSnackbar("Mission Successful!!");
     console.log("handling change");
-    // 	const did = "did:fvm:testnet:0xA3168f392809CAaC21f20EF5ac99e78d4b6BbD20";
-    // //const didDoc = await resolve_DID(did);
-    // //console.log("DID Doc", (JSON.parse(didDoc.didDocument[0])).service[0].serviceEndpoint);
+    const did = `did:fvm:testnet:${address}`;
+    const promises = files.map((file) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          resolve(e.target.result);
+        };
+        reader.onerror = reject;
+      });
+    });
 
-    // const buff = readFileSync("package.json");
-    // const base64data = buff.toString('base64');
+    const base64Result = await Promise.all(promises);
+    console.log("base64Result", base64Result);
 
-    // console.log("verify", await verify( base64data, did))
+    const verifyId = await verify(base64Result[0], did);
+    console.log("verify", verifyId);
   };
 
   return (
@@ -56,6 +68,9 @@ const VerifierLanding = () => {
                   Upload File to Verify
                 </label>
                 <div className="mt-4 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
+                  <div className="absolute w-full">
+                    <span class="animate-ping relative -top-8 left-72 mr-1 mt-1 inline-flex h-4 w-4 rounded-full bg-white"></span>
+                  </div>
                   <div className="space-y-1 text-center">
                     <svg
                       className="mx-auto h-12 w-12 text-gray-400"
@@ -82,7 +97,7 @@ const VerifierLanding = () => {
                           name="file-upload"
                           type="file"
                           className="sr-only"
-                          handleChange={handleChange}
+                          onChange={handleChange}
                         />
                       </label>
                       <p className="pl-1">or drag and drop</p>

@@ -40,10 +40,15 @@ const Landing = () => {
                     <button
                       class={
                         !isConnected &&
-                        "bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
+                        "border border-solid border-blue-500 hover:border-blue-700 text-black font-medium py-2 px-4 rounded"
                       }
                       onClick={show}
                     >
+                      {!isConnected && (
+                        <div className="absolute">
+                          <span class="animate-ping relative top-2.25 right-16 inline-flex h-3 w-3 rounded-full bg-sky-500 opacity-75"></span>
+                        </div>
+                      )}
                       {isConnected ? truncatedAddress : "Connect Wallet"}
                     </button>
                   )}

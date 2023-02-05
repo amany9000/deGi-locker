@@ -1,6 +1,7 @@
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SnackbarProvider from "react-simple-snackbar";
 import { createClient, WagmiConfig } from "wagmi";
 import { filecoinHyperspace } from "wagmi/chains";
 import Navbar from "./components/Navbar/Navbar";
@@ -72,8 +73,10 @@ const App = () => {
   return (
     <WagmiConfig client={client}>
       <ConnectKitProvider>
-        {subdomain !== "verifier" && pathname !== "/verifier" && <Navbar />}
-        <RouterProvider router={router} />
+        <SnackbarProvider>
+          <Navbar />
+          <RouterProvider router={router} />
+        </SnackbarProvider>
       </ConnectKitProvider>
     </WagmiConfig>
   );

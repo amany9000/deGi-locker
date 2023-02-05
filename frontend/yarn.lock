@@ -1137,7 +1137,7 @@
     "@babel/helper-validator-option" "^7.18.6"
     "@babel/plugin-transform-typescript" "^7.18.6"
 
-"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.2", "@babel/runtime@^7.20.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.2", "@babel/runtime@^7.20.7", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.20.13"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.20.13.tgz#7055ab8a7cff2b8f6058bf6ae45ff84ad2aded4b"
   integrity sha512-gt3PKXs0DBoL9xCvOIIZ2NEqAGZqHjAnmVbfQtB620V0uReIQutpel14KcneZuer7UioY8ALKZ7iocavvzTNFA==
@@ -6497,6 +6497,11 @@ crypto-browserify@3.12.0, crypto-browserify@^3.12.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+crypto-js@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.1.1.tgz#9e485bcf03521041bd85844786b83fb7619736cf"
+  integrity sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==
+
 crypto-random-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
@@ -7194,6 +7199,14 @@ dom-converter@^0.2.0:
   integrity sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==
   dependencies:
     utila "~0.4"
+
+dom-helpers@^5.0.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+    csstype "^3.0.2"
 
 dom-serializer@0:
   version "0.2.2"
@@ -9082,22 +9095,22 @@ functions-have-names@^1.2.2:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-fvm-credentials@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.10.tgz#49473bcc9ab1ba5dbf9baad2870fe37fd2fb55ed"
-  integrity sha512-l064uwKkrnuvcjI7IE6yZFU9LqoLKbVYPjeC1jfb3wGcghZuDmIuao3DqUuXebmK1HHbOhy6q+8MDcTUio35UA==
+fvm-credentials@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.15.tgz#9fe3b75264b3510a1a8964cab24ed8b9086705df"
+  integrity sha512-CZhAB369YoHOnPqFwfy54llEgdA7R32tx0+eZp8eeTD1iDhoHcK7eoax2zpNBOp3Wr6vYKm8kVdHXfki+MNUeQ==
   dependencies:
     did-resolver "^4.0.1"
     dotenv "^8.0.0"
-    fvm-did-registrar "0.0.24"
+    fvm-did-registrar "0.0.27"
     fvm-did-resolver "^0.0.21"
     ipfs-http-client "^56.0.2"
     prettier "^2.2.1"
 
-fvm-did-registrar@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/fvm-did-registrar/-/fvm-did-registrar-0.0.24.tgz#a74341ac8f44af491cf7652d8ec7525281d2fde5"
-  integrity sha512-ckJ9YPicVjgS0M2BGe5t/nS0T452R1jEsCEhs0POa1C+IXfCf6uCKR+K8xlsCbQzfLzWF6KxtvIrg8e8zWe2OQ==
+fvm-did-registrar@0.0.27:
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/fvm-did-registrar/-/fvm-did-registrar-0.0.27.tgz#b0d74d0cfc986cbac63a8c55ce0e5ca3791b8148"
+  integrity sha512-aEuZKnhD89HW/k1k4lESPusU+as6BCxVHotVqLKmODd6xeEBneB8greB5wMax8SuPPqcRRw2HTrJp0bcsK4JWw==
   dependencies:
     "@metamask/detect-provider" "^1.2.0"
     buffer "^6.0.3"
@@ -14054,7 +14067,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -14448,6 +14461,24 @@ react-scripts@5.0.1:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-simple-snackbar@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/react-simple-snackbar/-/react-simple-snackbar-1.1.11.tgz#e1470f49d04f8e1e941e62f459cca27d1b2167a1"
+  integrity sha512-l+RMkIoqnOXBQaQbirk4yGaEH5Jeynup/AQBGaq7hCPIIraOQi2RFVthZIM4Ms6sFtdSYxQ8emN4/jI30l7gXw==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    react-transition-group "^4.4.1"
+
+react-transition-group@^4.4.1:
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.5.tgz#e53d4e3f3344da8521489fbef8f2581d42becdd1"
+  integrity sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    dom-helpers "^5.0.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
 
 react-transition-state@^1.1.4:
   version "1.1.5"
