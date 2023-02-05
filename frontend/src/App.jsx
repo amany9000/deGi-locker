@@ -20,6 +20,7 @@ const client = createClient(
 );
 
 const subdomain = resolvePrefixSubdomain();
+const pathname = window.location.pathname;
 
 console.log("subdomain", subdomain);
 
@@ -39,6 +40,15 @@ const uploadRouter = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    children: [
+      {
+        path: "/verifier",
+        element: <VerifierLanding />,
       },
     ],
   },
@@ -62,7 +72,7 @@ const App = () => {
   return (
     <WagmiConfig client={client}>
       <ConnectKitProvider>
-        {subdomain !== "verifier" && <Navbar />}
+        {subdomain !== "verifier" && pathname !== "/verifier" && <Navbar />}
         <RouterProvider router={router} />
       </ConnectKitProvider>
     </WagmiConfig>

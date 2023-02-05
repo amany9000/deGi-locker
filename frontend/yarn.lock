@@ -6758,11 +6758,6 @@ dataloader@2.1.0:
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-2.1.0.tgz#c69c538235e85e7ac6c6c444bae8ecabf5de9df7"
   integrity sha512-qTcEYLen3r7ojZNgVUaRggOI+KM7jrKxXeSHhogh/TWxYMeONEMqY+hmkobiYQozsGIyg9OYVzO4ZIfoB4I0pQ==
 
-date-format@^4.0.14:
-  version "4.0.14"
-  resolved "https://registry.yarnpkg.com/date-format/-/date-format-4.0.14.tgz#7a8e584434fb169a521c8b7aa481f355810d9400"
-  integrity sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==
-
 debounce-fn@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/debounce-fn/-/debounce-fn-4.0.0.tgz#ed76d206d8a50e60de0dd66d494d82835ffe61c7"
@@ -8865,7 +8860,7 @@ flat@^5.0.2:
   resolved "https://registry.yarnpkg.com/flat/-/flat-5.0.2.tgz#8ca6fe332069ffa9d324c327198c598259ceb241"
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
-flatted@^3.1.0, flatted@^3.2.7:
+flatted@^3.1.0:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
@@ -8984,7 +8979,7 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@8.1.0, fs-extra@^8.1.0:
+fs-extra@8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
@@ -9087,22 +9082,22 @@ functions-have-names@^1.2.2:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-fvm-credentials@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.9.tgz#9ad64e16453ea9f0b60793f8a276ce173c853e4c"
-  integrity sha512-Ya+n+Rk/TIJlxBwcCobpD2BwXFN46VKpSHMbh68Fp/1lD6zH1hjr8TRr3t46PR6SooSq986aVlg1x9ep1sfy/Q==
+fvm-credentials@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.10.tgz#49473bcc9ab1ba5dbf9baad2870fe37fd2fb55ed"
+  integrity sha512-l064uwKkrnuvcjI7IE6yZFU9LqoLKbVYPjeC1jfb3wGcghZuDmIuao3DqUuXebmK1HHbOhy6q+8MDcTUio35UA==
   dependencies:
     did-resolver "^4.0.1"
     dotenv "^8.0.0"
-    fvm-did-registrar "0.0.23"
-    fvm-did-resolver "^0.0.20"
+    fvm-did-registrar "0.0.24"
+    fvm-did-resolver "^0.0.21"
     ipfs-http-client "^56.0.2"
     prettier "^2.2.1"
 
-fvm-did-registrar@0.0.23:
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/fvm-did-registrar/-/fvm-did-registrar-0.0.23.tgz#993e2b4850eb76edadc8ecfb1288fa39c2f9c0b6"
-  integrity sha512-I79R43z4VbDeriuhxX8nMfRsX98LD44/s6Vsp6XvhK4q4glv7m9HiavJQ9r8OmOvXWddv1P2474WAHCZXyHLmg==
+fvm-did-registrar@0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/fvm-did-registrar/-/fvm-did-registrar-0.0.24.tgz#a74341ac8f44af491cf7652d8ec7525281d2fde5"
+  integrity sha512-ckJ9YPicVjgS0M2BGe5t/nS0T452R1jEsCEhs0POa1C+IXfCf6uCKR+K8xlsCbQzfLzWF6KxtvIrg8e8zWe2OQ==
   dependencies:
     "@metamask/detect-provider" "^1.2.0"
     buffer "^6.0.3"
@@ -9118,7 +9113,6 @@ fvm-did-registrar@0.0.23:
     ethr-did-resolver "^3.0.3"
     fvm-did-registry-contract "^2.0.0"
     ganache-cli "^6.12.2"
-    log4js "^6.3.0"
     prettier "^2.2.1"
     truffle-contract "^4.0.31"
     typescript "^4.2.4"
@@ -9139,10 +9133,10 @@ fvm-did-registry-contract@2.0.0, fvm-did-registry-contract@^2.0.0:
     solc "0.8.17"
     truffle "^5.6.8"
 
-fvm-did-resolver@^0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/fvm-did-resolver/-/fvm-did-resolver-0.0.20.tgz#5ce0d5884023c86d67ed49630ae18c39523e69f7"
-  integrity sha512-IGscv450TtS/zQGb1hZ0PKMoukJeb4wTNGPIJy6AijiOoItuaazSLzdNso3f6VB/9ppvZo0vyyxDxUcK3O6Wug==
+fvm-did-resolver@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/fvm-did-resolver/-/fvm-did-resolver-0.0.21.tgz#05a19049c8af6f49fe72d5af6238d409b4749c0e"
+  integrity sha512-aO18j7p5IdzIlQxWv53B+OMkpxEmCCDjpqGHvJjv/hThTj3YjR/EKO92+p+hyoPDZMPFgOk4oOQIu6qsofR/cg==
   dependencies:
     "@metamask/detect-provider" "^1.2.0"
     buffer "^6.0.3"
@@ -9158,7 +9152,6 @@ fvm-did-resolver@^0.0.20:
     ethr-did-resolver "^3.0.3"
     fvm-did-registry-contract "2.0.0"
     ganache-cli "^6.12.2"
-    log4js "^6.3.0"
     prettier "^2.2.1"
     truffle-contract "^4.0.31"
     typescript "^4.2.4"
@@ -11742,17 +11735,6 @@ log-symbols@4.1.0:
   dependencies:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
-
-log4js@^6.3.0:
-  version "6.7.1"
-  resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.7.1.tgz#06e12b1ac915dd1067146ffad8215f666f7d2c51"
-  integrity sha512-lzbd0Eq1HRdWM2abSD7mk6YIVY0AogGJzb/z+lqzRk+8+XJP+M6L1MS5FUSc3jjGru4dbKjEMJmqlsoYYpuivQ==
-  dependencies:
-    date-format "^4.0.14"
-    debug "^4.3.4"
-    flatted "^3.2.7"
-    rfdc "^1.3.0"
-    streamroller "^3.1.3"
 
 loglevel@^1.6.8:
   version "1.8.1"
@@ -14861,11 +14843,6 @@ reusify@^1.0.4:
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
-rfdc@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/rfdc/-/rfdc-1.3.0.tgz#d0b7c441ab2720d05dc4cf26e01c89631d9da08b"
-  integrity sha512-V2hovdzFbOi77/WajaSMXk2OLm+xNIeQdMMuB7icj7bk6zi2F8GGAxigcnDFpJHbNyNcgyJDiP+8nOrY5cZGrA==
-
 rimraf@^3.0.0, rimraf@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.2.tgz#f1a5402ba6220ad52cc1282bac1ae3aa49fd061a"
@@ -15561,15 +15538,6 @@ stream@^0.0.2:
   integrity sha512-gCq3NDI2P35B2n6t76YJuOp7d6cN/C7Rt0577l91wllh0sY9ZBuw9KaSGqH/b0hzn3CWWJbpbW0W0WvQ1H/Q7g==
   dependencies:
     emitter-component "^1.1.1"
-
-streamroller@^3.1.3:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/streamroller/-/streamroller-3.1.4.tgz#844a18e795d39c1089a8216e66a1cf1151271df0"
-  integrity sha512-Ha1Ccw2/N5C/IF8Do6zgNe8F3jQo8MPBnMBGvX0QjNv/I97BcNRzK6/mzOpZHHK7DjMLTI3c7Xw7Y1KvdChkvw==
-  dependencies:
-    date-format "^4.0.14"
-    debug "^4.3.4"
-    fs-extra "^8.1.0"
 
 streamsearch@^1.1.0:
   version "1.1.0"
