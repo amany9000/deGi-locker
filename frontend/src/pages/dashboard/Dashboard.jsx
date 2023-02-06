@@ -1,3 +1,4 @@
+import CryptoJS from "crypto-js";
 import sha256 from "crypto-js/sha256";
 import { genCIDFunc, register_DIDSigner } from "fvm-credentials";
 import { useState } from "react";
@@ -34,7 +35,9 @@ const Dashboard = () => {
 
     const base64Result = await Promise.all(promises);
     console.log("base64Result", base64Result);
-    const files64Hash = base64Result.map((base64) => sha256(base64));
+    const files64Hash = base64Result.map((base64) =>
+      sha256(base64).toString(CryptoJS.enc.Hex)
+    );
     console.log("files64Hash", files64Hash);
 
     try {
@@ -91,19 +94,19 @@ const Dashboard = () => {
                 Driving License
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                12a453da382fde1aea610decac62a19c
+                6b3c6818bc7273040e059272ab84cde782d249294a5ad9b890befc309f9aee68
               </dd>
             </div>
             <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">PAN Card</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                8bfb21925c88382336ee3519cad45e54
+                8a712340ea5022458a8247dea060b461de68a3e6c023d527970ab0e189940ed7
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Passport</dt>
               <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                5eb567dae33f12fedd2b9b1cc3281d71
+                e19e98e0cc87cf79da7c5a593ed132cafea1242e472274b40d234781b7f90f5b
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

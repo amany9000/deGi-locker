@@ -1,5 +1,5 @@
+import axios from "axios";
 import { ConnectKitButton } from "connectkit";
-import { verify } from "fvm-credentials";
 import { useSnackbar } from "react-simple-snackbar";
 import { useAccount } from "wagmi";
 
@@ -10,25 +10,50 @@ const VerifierLanding = () => {
   const handleChange = async (event) => {
     const files = Array.from(event.target.files);
     console.log("files", files);
-    openSnackbar("Mission Successful!!");
     console.log("handling change");
     const did = `did:fvm:testnet:${address}`;
-    const promises = files.map((file) => {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = (e) => {
-          resolve(e.target.result);
-        };
-        reader.onerror = reject;
-      });
-    });
+    // const promises = files.map((file) => {
+    //   return new Promise((resolve, reject) => {
+    //     const reader = new FileReader();
+    //     reader.readAsDataURL(file);
+    //     reader.onload = (e) => {
+    //       resolve(e.target.result);
+    //     };
+    //     reader.onerror = reject;
+    //   });
+    // });
 
-    const base64Result = await Promise.all(promises);
-    console.log("base64Result", base64Result);
+    // const base64Result = await Promise.all(promises);
+    // console.log("base64Result", base64Result);
 
-    const verifyId = await verify(base64Result[0], did);
-    console.log("verify", verifyId);
+    // const verifyId = await verify(base64Result[0], did);
+    // console.log("verify", verifyId);
+    const formData = new FormData();
+    for (const file of files) {
+      formData.append("file", file);
+    }
+
+    //const data = await ipfs.cat(cid).next()
+    //console.log('Data read back via ipfs.cat:',  new TextDecoder().decode(data.value))
+    try {
+      const res = await axios.post(
+        `http://localhost:8000/verify?address=${address}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log("res", res);
+      if (res.data.verification) {
+        openSnackbar("File Verified Successfully!");
+      } else {
+        openSnackbar("File Verified Successfully!");
+      }
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
   return (
