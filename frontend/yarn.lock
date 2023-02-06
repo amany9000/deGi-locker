@@ -9095,10 +9095,10 @@ functions-have-names@^1.2.2:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-fvm-credentials@0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.17.tgz#40acc045620a2ee8039a9a7a8a8b9e71f19aee0b"
-  integrity sha512-glKzCrSr5L/EHn3fOImR32ZOgHHnbxwFNyi0fyA6MhYTSbSBWHIvb4Af0UdwfMRAwqh5FBOjNUxITVX/eujxug==
+fvm-credentials@0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/fvm-credentials/-/fvm-credentials-0.0.20.tgz#1ec465e87daa87f6af14c37814d3d63c525a650f"
+  integrity sha512-QEsS8jCvo2sljEFhXIP9Vh3gzG0hW5DONb5aS61Wc1e5sqCebSEcvOGgAA/hm9+P9s26zaijKOUtExzQLc+r5w==
   dependencies:
     did-resolver "^4.0.1"
     dotenv "^8.0.0"

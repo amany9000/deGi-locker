@@ -40,12 +40,12 @@ const Dashboard = () => {
     try {
       const cid = await genCIDFunc(files64Hash, getSignature);
       console.log("genCIDFunc", cid);
-      openSnackbar("Mission Successful!!");
       const did = await register_DIDSigner(
         `did:fvm:testnet:${address}`,
         cid,
         signer
       );
+      openSnackbar(`DID Registered with Tx Hash ${did}`);
 
       console.log("cid", cid);
       console.log("did", did);
