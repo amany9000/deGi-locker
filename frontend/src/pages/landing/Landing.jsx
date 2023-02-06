@@ -46,7 +46,7 @@ const Landing = () => {
                     >
                       {!isConnected && (
                         <div className="absolute">
-                          <span class="animate-ping relative top-2.25 right-16 inline-flex h-3 w-3 rounded-full bg-sky-500 opacity-75"></span>
+                          <span class="animate-ping relative bottom-5 left-32 inline-flex h-3 w-3 rounded-full bg-sky-500 opacity-75"></span>
                         </div>
                       )}
                       {isConnected ? truncatedAddress : "Connect Wallet"}
