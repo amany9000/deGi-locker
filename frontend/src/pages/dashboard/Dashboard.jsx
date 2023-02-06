@@ -1,4 +1,3 @@
-import CryptoJS from "crypto-js";
 import sha256 from "crypto-js/sha256";
 import { genCIDFunc, register_DIDSigner } from "fvm-credentials";
 import { useState } from "react";
@@ -35,9 +34,7 @@ const Dashboard = () => {
 
     const base64Result = await Promise.all(promises);
     console.log("base64Result", base64Result);
-    const files64Hash = base64Result.map((base64) =>
-      sha256(base64).toString(CryptoJS.enc.Hex)
-    );
+    const files64Hash = base64Result.map((base64) => sha256(base64));
     console.log("files64Hash", files64Hash);
 
     try {
